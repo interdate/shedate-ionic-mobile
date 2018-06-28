@@ -17,6 +17,7 @@
 
 
 
+
 .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
 .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
   border-bottom-color: rgba(0,0,0,0);
@@ -855,4 +856,8 @@ ion-footer.footer-ios::before {
     font-size: 0.7em;
 }
 
+}
+
+ion-content .padding-bottom{
+  padding-bottom: 40px !important;
 }

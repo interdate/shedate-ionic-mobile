@@ -28,7 +28,7 @@
 </div>
 <ion-content>
 
-    <div>
+    <div [ngClass]="{'padding-bottom': api.banner?.src && api.banner?.link}">
         <div *ngIf="user.isOnline == '1'" class="online"></div>
 
         <div class="photos" [ngStyle]="{ 'direction': 'ltr'}">
@@ -210,7 +210,7 @@
                 </ul>
 
             </div>
-            <div *ngIf="myId != user.id && formReportAbuse?.title" class="pmtitle bottom">
+            <div *ngIf="myId != user.id && formReportAbuse?.title" class="pmtitle bottom" >
                 <button tappable (click)="reportAbuseShow()" color="dark" class="report-abuse" icon-left ion-button>
                     <ion-icon name="megaphone"></ion-icon>
                     {{ formReportAbuse?.title }}

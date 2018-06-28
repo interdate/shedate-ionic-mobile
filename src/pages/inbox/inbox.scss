@@ -1,4 +1,8 @@
 page-inbox {
+  .padding-bottom{
+    position: absolute;
+    width: 91%;
+  }
  .message { min-height: 50px; }
  .gray-bg { background: #ccc }
  .counter {
@@ -13,4 +17,5 @@ page-inbox {
   .highlight{
     background-color: #f1bad1;
   }
+
 }
