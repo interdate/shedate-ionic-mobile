@@ -77,8 +77,6 @@ export class HomePage {
 
         this.page_counter = 1;
 
-
-
         this.storage.get('username').then((username) => {
             this.storage.get('password').then((password) => {
                 this.password = password;
