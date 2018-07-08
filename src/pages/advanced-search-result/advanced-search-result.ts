@@ -296,4 +296,8 @@ export class AdvancedSearchResultPage {
         }
         infiniteScroll.complete();
     }
+
+    ionViewWillEnter() {
+        this.api.pageName = 'AdvancedSearchResultPage';
+    }
 }

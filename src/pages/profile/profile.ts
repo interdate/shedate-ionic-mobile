@@ -63,8 +63,9 @@ export class ProfilePage {
         var user = navParams.get('user');
 
         if (user) {
-            if (user.photo && !user.photos) {
-                user.photos = [{url: user.photo,large: user.photo.replace('h_600,w_600','h_800,w_800')}];
+            if ((user.photo || user.imageUrl) && !user.photos) {
+                let url = (user.photo) ? user.photo : user.imageUrl;
+                user.photos = [{url: url,large: url.replace('h_600,w_600','h_800,w_800')}];
             }
             this.user = user;
             this.photos = this.user.photos;

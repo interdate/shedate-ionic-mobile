@@ -44,7 +44,6 @@ export class MyApp {
     // make HelloIonicPage the root (or first) page
     rootPage: any;
     //rootPage = LoginPage;
-    banner: {src: string; link: string};
     menu_items_logout: Array<{_id: string, icon: string, title: string, count: any, component: any}>;
     menu_items_login: Array<{_id: string, icon: string, title: string, count: any, component: any}>;
     menu_items: Array<{_id: string, icon: string, title: string, count: any, component: any}>;
@@ -534,13 +533,19 @@ export class MyApp {
     }
 
     getBanner() {
-        this.http.get(this.api.url + '/user/banner', this.api.header).subscribe(data => {
-            this.banner = data.json();
-        });
+        if(this.api.pageName != 'ArenaPage' && this.api.pageName != 'SearchPage' && this.api.pageName != 'DialogPage' && this.api.pageName != 'AdvancedSearchPage') {
+            this.http.get(this.api.url + '/user/banner', this.api.header).subscribe(data => {
+                this.api.banner = data.json();
+            });
+
+        }else{
+            this.api.banner = {src: '', link: ''};
+        }
+        //this.content.resize();
     }
 
     goTo() {
-        window.open(this.banner.link, '_blank');
+        window.open(this.api.banner.link, '_blank');
         return false;
     }
 

@@ -23,6 +23,7 @@ export class ApiQuery {
     public footer: any = true;
     public pageName: any = false;
     public loading: any;
+    public banner: {src: string; link: string};
 
     public signupData: {  username: any, password: any };
 
