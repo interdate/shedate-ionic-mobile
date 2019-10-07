@@ -23,8 +23,8 @@
     <div *ngIf="user.isAddFavorite == '0' && user.id " tappable (click)="addFavorites(user)"
          class="favorite-profile-btn">
         <img src="assets/img/icons/padd.png"></div>
-    <div *ngIf="user.isAddFavorite == '1'" class="disabled favorite-profile-btn"><img
-            src="assets/img/icons/padd.png"></div>
+    <div *ngIf="user?.isAddFavorite == '1'" (click)="addFavorites(user)" class="disabled favorite-profile-btn"><img
+            src="assets/img/icons/cap.png"></div>
 </div>
 <ion-content>
 
